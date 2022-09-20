@@ -120,3 +120,37 @@ var planFeatures = [
 	}
 
 ]
+
+
+// GENERAL iterate through the plans to filter out different features
+planFeatures.forEach(function (i) {
+    console.log(i.category);
+});
+
+
+//upgrade from pro to business plus
+var proToPlus = [];
+
+planFeatures.forEach(function (feature) {
+	if (feature.lowestAvailablePlan == "Business Plus")
+    proToPlus.push(feature);
+	return proToPlus;
+});
+
+//upgrade from business plus to enterprise select
+var plusToSelect = [];
+
+planFeatures.forEach(function (feature) {
+	if (feature.lowestAvailablePlan == "Enterprise Select")
+    plusToSelect.push(feature);
+	return plusToSelect;
+});
+
+//upgrade from business plus to enterprise grid
+var plusToGrid = [];
+
+planFeatures.forEach(function (feature) {
+	if (feature.lowestAvailablePlan == "Enterprise Select" || feature.lowestAvailablePlan == "Enterprise Grid")
+    plusToGrid.push(feature.feature);
+	return plusToGrid;
+});
