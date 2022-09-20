@@ -117,8 +117,141 @@ var planFeatures = [
 		details: "Block download/copy, block jailbroken/rooted devices, default browser control, secondary auth",
 		lowestAvailablePlan: "Enterprise Grid",
 		isIntegration: false
+	},
+	{
+		category: "Identity and Device Management",
+		feature: "User Groups",
+		details: "Add user groups in Slack to for @ mentioned",
+		lowestAvailablePlan: "Pro",
+		isIntegration: false
+	},
+	{
+		category: "Identity and Device Management",
+		feature: "IDP Groups",
+		details: "Auto-assign groups of users to a Workspace",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: true
+	},
+	{
+		category: "Identity and Device Management",
+		feature: "Domain Claining",
+		details: "Prevent unsanctioned workspace creation.",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "EKM (Enterprise Key Management)",
+		details: "Customers manage their encryption keys with granular control.",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: false,
+		isAddOn: true
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Legal Holds",
+		details: "Put user(s) on a legal hold so that their data is preserved.",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Information Barriers",
+		details: "Prevent groups of users from DMing each other.",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "DLP (Data Loss Prevention)",
+		details: "Enforce CASB policies to scan/block content within messages and files. ",
+		lowestAvailablePlan: "Enterprise Select",
+		isIntegration: true
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Native DLP (Slack Connect only)",
+		details: "Native DLP preferences that are controlled from the Org dashboard that affect Slack Connect channels only. ",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Audit Log API",
+		details: "Connect to SIEM tools or database. **No OOTB integration for any 3rd party",
+		lowestAvailablePlan: "Enterprise Select",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "eDiscovery Archiving",
+		details: "Pull messages & files into 3rd party data storage for legal/compliance/storage",
+		lowestAvailablePlan: "Enterprise Select",
+		isIntegration: true
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Data Exports - All Data",
+		details: "All channels and conversations including private Channels, DMs and MPDMs",
+		lowestAvailablePlan: "Business Plus",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Data Exports - Single User Exports",
+		details: ".TXT human readable format or JSON file. All messages and links to files.",
+		lowestAvailablePlan: "Enterprise Select",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Data Exports - Org Level Dashboard",
+		details: "Granularity for exports across Grid workspaces ",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Custom Terms of Service",
+		details: "Link to corporate policies, legal or internal info sources",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Whitelisting Workspaces",
+		details: "Use an SSL proxy to prevent anyone on your network from signing in to a non-whitelisted workspace.",
+		lowestAvailablePlan: "Business Plus",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Whitelisting Workspaces",
+		details: "Use an SSL proxy to prevent anyone on your network from signing in to a non-whitelisted workspace.",
+		lowestAvailablePlan: "Business Plus",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Data Residency",
+		details: "Give global teams increased control over where your data is stored.",
+		lowestAvailablePlan: "Business Plus",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Flag Messages",
+		details: "Users can flag inappropriate messages for the admin team to review and delete.",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: false
+	},
+	{
+		category: "Data Protection & Information Governance",
+		feature: "Lock Threads",
+		details: "Admins can prevent new messages being posted into a thread",
+		lowestAvailablePlan: "Enterprise Grid",
+		isIntegration: false
 	}
-
 ]
 
 
