@@ -127,13 +127,6 @@ var planFeatures = [
 	},
 	{
 		category: "Identity and Device Management",
-		feature: "IDP Groups",
-		details: "Auto-assign groups of users to a Workspace",
-		lowestAvailablePlan: "Enterprise Grid",
-		isIntegration: true
-	},
-	{
-		category: "Identity and Device Management",
 		feature: "Domain Claining",
 		details: "Prevent unsanctioned workspace creation.",
 		lowestAvailablePlan: "Enterprise Grid",
@@ -226,13 +219,6 @@ var planFeatures = [
 	},
 	{
 		category: "Data Protection & Information Governance",
-		feature: "Whitelisting Workspaces",
-		details: "Use an SSL proxy to prevent anyone on your network from signing in to a non-whitelisted workspace.",
-		lowestAvailablePlan: "Business Plus",
-		isIntegration: false
-	},
-	{
-		category: "Data Protection & Information Governance",
 		feature: "Data Residency",
 		details: "Give global teams increased control over where your data is stored.",
 		lowestAvailablePlan: "Business Plus",
@@ -266,7 +252,7 @@ var proToPlus = [];
 
 planFeatures.forEach(function (feature) {
 	if (feature.lowestAvailablePlan == "Business Plus")
-    proToPlus.push(feature);
+    proToPlus.push(feature.feature);
 	return proToPlus;
 });
 
@@ -286,4 +272,13 @@ planFeatures.forEach(function (feature) {
 	if (feature.lowestAvailablePlan == "Enterprise Select" || feature.lowestAvailablePlan == "Enterprise Grid")
     plusToGrid.push(feature.feature);
 	return plusToGrid;
+});
+
+//upgrade from business plus to enterprise grid
+var selectToGrid = [];
+
+planFeatures.forEach(function (feature) {
+	if (feature.lowestAvailablePlan == "Enterprise Grid") {
+	selectToGrid.push(feature.feature, feature.details); }
+	return selectToGrid;
 });
