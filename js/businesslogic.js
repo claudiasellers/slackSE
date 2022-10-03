@@ -5,11 +5,3 @@ fetch(url)
   // Do something with the data
   console.log(json.sheetone);
 });
-
-
-
-
-
-
-
-

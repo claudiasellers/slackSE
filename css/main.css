@@ -8,6 +8,10 @@
 	src: url('../fonts/BebasNeue.otf');
 }
 
+a {
+	padding-left:25px;
+}
+
 body, html {
 	margin: 0px;
 	height: 100%;
@@ -15,9 +19,12 @@ body, html {
 	font-family: Bebas;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
+header .leftContainer {
+	margin-top: 40px;
+}
+.col-lg-4{
+	margin-top: 30px;
+	margin-left: 10px;
 }
 
 input {
@@ -26,49 +33,15 @@ input {
 	outline: none;
 }
 
-
-header {
-	background-color: #F7F4F2;
-	padding: 25px;
-	width: 100%;
-	position: fixed;
-	top: 0px;
-	box-shadow: 0 13px 13px -13px #000000;
-}
-
-header .leftContainer {
-	display: inline-block;
-	float: left;
-	margin-left: 33px;
-}
-
-header .rightContainer {
-	display: inline-block;
-	float: right;
-	margin-right: 58px;
-}
-
-header .rightContainer span {
-	margin-left: 33px;
-	cursor: pointer;
-	font-family: Bebas;
-	font-size: 33px;
-	color: #3B2824;
-}
-
-header .rightContainer span:hover {
-	color: #ADC7BE;
-}
-
 #logo {
 	font-family: Prisma;
 	font-size: 50px;
 	color: #ADC7BE;
-	margin-right: 10px;
 }
 
-
-
+.green{
+	color: #ADC7BE
+}
 
 .form {
 	font-size: 33px;		

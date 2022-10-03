@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+    console.log( "ready!" );
+	const currentPlan = document.getElementById('currentPlan');
+
 var planFeatures = [
 	{
 		category: "Channel Features",
@@ -282,3 +286,44 @@ planFeatures.forEach(function (feature) {
 	selectToGrid.push(feature.feature, feature.details); }
 	return selectToGrid;
 });
+
+//making it more general
+currentPlanChosen = ""
+futurePlanChosen = ""
+
+
+currentPlan.addEventListener('change', function handleChange(event) {
+  // 👇️ get selected TEXT in or outside event handler
+ currentPlanChosen = currentPlan.options[currentPlan.selectedIndex].text;
+ //console.log(currentPlanChosen)
+ return currentPlanChosen;
+});
+
+futurePlan.addEventListener('change', function handleChange(event) {
+	// 👇️ get selected TEXT in or outside event handler
+	futurePlanChosen = futurePlan.options[futurePlan.selectedIndex].text;
+   //console.log(currentPlanChosen)
+   return futurePlanChosen;
+  });
+
+
+  upgradeFeatures = [];
+
+  document.getElementById("calculatePlanFeatures").addEventListener('click', function() {
+	//console.log(futurePlanChosen)
+	planFeatures.forEach(function (feature) {
+		if (feature.lowestAvailablePlan == futurePlanChosen) {
+			upgradeFeatures.push(feature.feature)
+		}
+		document.getElementById("planFeatureResults").innerHTML = JSON.stringify(upgradeFeatures.join("<br><br>"))
+		
+		//JSON.stringify(upgradeFeatures); 
+		return upgradeFeatures;
+	})
+});
+
+
+});
+
+
+//NEXT : if currentPlanChosen = "" AND feature = xyz then show me all the features you get from an upgrade or better yet write one function that takes in both of the chosen plans and populates them with like lowestavailableplan = event listenered plan type
